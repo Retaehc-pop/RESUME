@@ -1,0 +1,126 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{cmbright}
+\usepackage{geometry}
+% \usepackage{microtype}
+% \usepackage{paracol}
+\usepackage{supertabular}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+
+% Geometry
+\geometry{vmargin=0.5cm,hmargin=1cm}
+\pagestyle{empty}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\heading}{\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\sffamily\Huge Papop Lekhapanyaporn} & Email : \href{mailto:papop.lekhapanyaporn@gmail.com}{papop.lekhapanyaporn@gmail.com}\\
+  \smallskip{\large{}} & Mobile : \href{tel:+491627400833}{(+49)162-740-0833} \\
+  &Website : \href{https://papop.dev/}{https://www.papop.dev}
+\end{tabular*}}
+
+\newcommand{\signature}[3]{%
+  \\#3\\
+  \vspace{0.2in}
+  \begin{minipage}{0.3\textwidth}
+    \vspace{\baselineskip}
+    \includegraphics[#1]{#2}
+  \end{minipage}
+}
+\newcommand{\coverletter}[3]{
+  
+  \section{}
+  \textbf{Bewerbung als #1 an der #2}\\
+  
+  #3
+  \vspace*{\fill}
+}
+    
+\begin{document}
+%----------HEADING-----------------
+\heading
+\input{cv/profile_de}
+\newpage
+
+\heading
+\coverletter{FTBA Informatik Tutor}{RWTH Aachen}{
+  \vspace{0.2in}
+  \begin{flushright}
+  \today\\
+  \end{flushright}
+  \vspace{0.2in}
+  \vspace{-0.1in}\setlength\parindent{24pt}
+  \noindent
+  \input{letters/cover_de}
+}
+
+\end{document}
