@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.14)  14 JUN 2023 16:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.14)  21 JUN 2023 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,31 +483,25 @@ LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 22.
 ) [1
 
-{C:/Users/Papop/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (letters/cover_de.tex
-<Img/signature.jpg, id=47, 799.48688pt x 357.58594pt>
-File: Img/signature.jpg Graphic file (type jpg)
-<use Img/signature.jpg>
-Package pdftex.def Info: Img/signature.jpg  used on input line 15.
-(pdftex.def)             Requested size: 142.26378pt x 63.62608pt.
-) [2 <./Img/signature.jpg>] (resume.aux)
+{C:/Users/Papop/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (resume.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: EB07099852351C46271D00C63F78CF19;533.
+(rerunfilecheck)             Checksum: 5788B9027710DF56E1AB16E7787784FB;498.
  ) 
 Here is how much of TeX's memory you used:
- 14559 strings out of 475281
- 256139 string characters out of 2774064
+ 14539 strings out of 475281
+ 255781 string characters out of 2774064
  609583 words of memory out of 3000000
- 35834 multiletter control sequences out of 15000+600000
+ 35823 multiletter control sequences out of 15000+600000
  475518 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,7n,77p,710b,452s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,7n,77p,318b,449s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\tbmr10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\cmbr10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\cmbrbx10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\cmbrsl10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi720\cmbrbx10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi720\tbmr10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi864\cmbr10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi720\cmbr10.pk> <C:\Users\Papop\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi1493\cmbrbx10.pk>
-Output written on resume.pdf (2 pages, 158348 bytes).
+Output written on resume.pdf (1 page, 99646 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 346 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
