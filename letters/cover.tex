@@ -1,5 +1,96 @@
+\documentclass[letterpaper,11pt]{article}
 
-\begin{flushright}
-Sincerely,
-\signature{width=5cm}{Img/signature.jpg}{Papop Lekhapanyaporn}
-\end{flushright}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\urlstyle{same}
+
+% Addressee and opening
+\newcommand{\recipientInfo}[1]{
+  \vspace{2em}
+  Dear #1,\\
+  \vspace{1.5em}
+}
+
+% Closing
+\newcommand{\closing}[1]{
+  \vspace{2em}
+  Sincerely, \\
+  \textbf{#1}
+}
+
+%\renewcommand{\paragraph}[1]{\par\noindent#1\vspace{1em}}
+\renewcommand{\paragraph}[1]{\par\noindent\setlength{\parskip}{0.5em}\setlength{\parindent}{0pt}#1\par\vspace{1em}}
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+%-------------------
+% Cover Letter Start
+%-------------------
+\begin{document}
+
+% Header
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Papop Lekhapanyaporn} & Email : \href{mailto:papop.lekhapanyaporn@gmail.com}{papop.lekhapanyaporn@gmail.com}\\
+  \href{https://papop.dev}{papop.dev} & Mobile : \href{tel:+491627400833}{(+49)162-740-0833} \\
+\end{tabular*}
+
+\section{Cover letter}
+% Recipient
+\recipientInfo{Databricks}
+
+% Introduction
+\paragraph{
+I am writing to express my interest in the Software Engineering Internship position at Databricks.
+As a Bachlor student majoring in Computer Science at RWTH Aachen, expecting to graduate in October 2025, I am eager to contribute to your team and apply my skills in software development and collaborative problem-solving to create impactful solutions. 
+Databricks’ mission of accelerating innovation and data-driven insights resonates strongly with me, and I am enthusiastic about the opportunity to work alongside your talented team.
+}
+
+% Body paragraph 1: Skills and experiences
+\paragraph{
+Long before my academic year at RWTH Aachen, I have always love to learn new things particularly about computer.
+I picked Python as my first languages and later change to c/c++ for my cansat project during my 10th grade. I also picked up many languages along my coding journey and later learn java through the university course.
+From the started, I have developed a strong foundation in computer science, with a particular focus on algorithms, data structures, and object-oriented programming principles. 
+I am comfortable implementing efficient solutions using these languages and have consistently applied OOP principles to design scalable applications.
+}
+
+% Body paragraph 2: HPC and collaborative work
+\paragraph{
+In addition to my foundational knowledge, I am deeply interested in High-Performance Computing (HPC) and parallel computing. My coursework and independent studies in this area have equipped me with a keen understanding of distributed systems, parallel algorithms, and techniques to optimize computation-intensive tasks.
+I am excited by the prospect of leveraging these interests to contribute to Databricks' innovative solutions, especially in optimizing data-driven workloads and scaling infrastructure.
+}
+% Conclusion
+%
+\paragraph{
+Furthermore, I love to work in collaborative environments where I can work with a team to tackle ambiguous problems.
+I believe my passion for finding elegant solutions through innovative thinking aligns well with Databricks’ values.
+The opportunity to contribute to a culture focused on pushing the boundaries of what is possible with data would be a perfect match for my professional aspirations.
+}
+
+% Closing
+\closing{Papop Lekhapanyaporn}
+
+\end{document}
+
