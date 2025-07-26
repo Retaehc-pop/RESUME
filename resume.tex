@@ -2,137 +2,130 @@
 % Resume in Latex : 2024
 %-------------------------
 
-%\documentclass[letterpaper,11pt]{article}
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper, 9pt]{article}
 \usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
-% \usepackage[letterpaper, margin=0.3in]{geometry}
 
+%%% Special Character
+\usepackage{latexsym} % math symbole
+\usepackage{marvosym} % Special character
 
-
-\usepackage{latexsym}
-% \usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
+\usepackage{titlesec} % allow change to /section
+\usepackage{enumitem}  % Customize \item 
+\usepackage[hidelinks]{hyperref} % hide URL
+\usepackage{fancyhdr} % header and footer customization
+\usepackage[english]{babel} % use English
+% \usepackage[german]{babel} % use German
+\usepackage{tabularx} % table column style
 \input{glyphtounicode}
 
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-
-
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
 
 \pagestyle{empty}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-% \addtolength{\oddsidemargin}{-0.3in}
-% \addtolength{\evensidemargin}{-0.3in}
-% \addtolength{\textwidth}{1in}
-% \addtolength{\topmargin}{-.5in}
-% \addtolength{\textheight}{1.0in}
-%
-% \urlstyle{same}
-%
-\raggedbottom
+% \fancyfoot}
+% \raggedbottom
 \raggedright
-% \setlength{\tabcolsep}{0in}
+\setlength{\tabcolsep}{0in}
 %
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-4pt}
+  \scshape
+  \raggedright
+  \large
+}{}{0em}{}[\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-\newcommand{\resumeItemSmall}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+%
+\newcommand{\resumeTitle}[4]{
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1} $\vert$ \small{#2} & {#3} - {#4}\\
+  \end{tabular*}\vspace{-1.5em}
 }
 
+\newcommand{\resumeLanguage}[3]{
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lll}
+    #1 & #2 & #3
+  \end{tabular*}\vspace{-1.5em}
+}
+
+\newcommand{\resumeSmallTitle}[4]{
+\textbf{#1} $\vert$ \small{#2} \hfill {#3} --- {#4}\vspace{-0.5em}
+}
+
+\newcommand{\resumeListStart}{
+  \begin{itemize}[label=\textbullet,leftmargin=*]
+}
+\newcommand{\resumeListEmptyStart}{
+  \begin{itemize}[label={},left=0pt,leftmargin=*]
+}
+\newcommand{\resumeListEnd}{
+  \end{itemize}
+}
 \newcommand{\block}[1]{%
   \begin{samepage}
     #1
   \end{samepage}
 }
 
-
-\newcommand{\resumeProject}[1]{
-  \begin{tabular*}{.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1 }\\
-      %\begin{itemize}
-      %\end{itemize}
-    \end{tabular*}
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}\vspace{-0.25em}
 }
 
 
-% Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1}$\vert$\textit{\small{#2}} &\\ \small#3\\
-    \end{tabular*}\vspace{-5pt}
-}
+% \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item[]% Empty
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1}|\textit{\small#3} & \textit{\small #4}\\
-    \end{tabular*}\vspace{-5pt}
-}
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+% \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+% \newcommand{\resumeItemListStart}{\begin{itemize}}
+% \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
 
 
 %-------------------
 %-- CV START HERE --
 %-------------------
 \begin{document}
-
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Papop Lekhapanyaporn} & Email : \href{mailto:papop.lekhapanyaporn@gmail.com}{papop.lekhapanyaporn@gmail.com}\\
-  \href{https://papop.dev}{papop.dev} & Mobile : \href{tel:+491627400833}{(+49)162-740-0833} \\
+  \href{https://papop.dev}{https://papop.dev} & Mobile : \href{tel:+491627400833}{(+49)162-740-0833} \\
 \end{tabular*}
 
 %---------EXPERIENCE--------------
-\input{cv/experience/en.tex}
+\block{
+  \input{cv/experience/en.tex}
+}
 %---------EDUCATION---------------
-\input{cv/education/en.tex}
+\block{
+  \input{cv/education/en.tex}
+}
 %---------PROJECT-----------------
-\input{cv/project/en.tex}
+\block{
+  \input{cv/project/en.tex}
+}
 
-\input{cv/activities/en.tex}
+\block{
+  \input{cv/activities/en.tex}
+}
 
-\input{cv/skill/en.tex}
+\block{
+  \input{cv/skill/en.tex}
+}
 
-\input{cv/language/en.tex}
-
+\block{
+  \input{cv/language/en.tex}
+}
 \end{document}
