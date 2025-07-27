@@ -17,6 +17,7 @@
 % \usepackage[german]{babel} % use German
 \usepackage{tabularx} % table column style
 \input{glyphtounicode}
+\usepackage{ifthen}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -35,7 +36,8 @@
 % \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-%
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=$\circ$}
 
 % Sections formatting
 \titleformat{\section}{\vspace{-4pt}
@@ -52,7 +54,11 @@
 %
 \newcommand{\resumeTitle}[4]{
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-  \textbf{#1} $\vert$ \small{#2} & {#3} - {#4}\\
+  \textbf{#1} $\vert$ \small{#2} & 
+  \ifthenelse{\equal{#3}{#4}}%
+      {#3}%
+      {#3 --- #4}%
+    \\
   \end{tabular*}\vspace{-1.5em}
 }
 
@@ -67,10 +73,10 @@
 }
 
 \newcommand{\resumeListStart}{
-  \begin{itemize}[label=\textbullet,leftmargin=*]
+  \begin{itemize}[leftmargin=*]
 }
 \newcommand{\resumeListEmptyStart}{
-  \begin{itemize}[label={},left=0pt,leftmargin=*]
+  \begin{itemize}[label={},leftmargin=0pt]
 }
 \newcommand{\resumeListEnd}{
   \end{itemize}
@@ -84,15 +90,6 @@
 \newcommand{\resumeItem}[1]{
   \item\small{#1}\vspace{-0.25em}
 }
-
-
-% \renewcommand{\labelitemii}{$\circ$}
-
-% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-% \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-% \newcommand{\resumeItemListStart}{\begin{itemize}}
-% \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
-
 
 %-------------------
 %-- CV START HERE --
