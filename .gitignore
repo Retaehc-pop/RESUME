@@ -6,3 +6,14 @@
 *.dvi
 *.log
 
+# Legacy root-level build artifacts
+resume.pdf
+resume.tex.bak
+
+# Build output (aux files auto-ignored above; PDFs in pdf/ are tracked)
+pdf/*.aux
+pdf/*.log
+pdf/*.fls
+pdf/*.fdb_latexmk
+pdf/*.synctex.gz
+

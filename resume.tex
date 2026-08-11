@@ -2,7 +2,10 @@
 % Resume in Latex : 2024
 %-------------------------
 
-\documentclass[letterpaper, 9pt]{article}
+\ifx\cvtype\undefined\def\cvtype{hpc}\fi
+\ifx\cvfontsize\undefined\def\cvfontsize{9pt}\fi
+
+\documentclass[letterpaper,\cvfontsize]{article}
 \usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
 
 %%% Special Character
@@ -10,7 +13,7 @@
 \usepackage{marvosym} % Special character
 
 \usepackage{titlesec} % allow change to /section
-\usepackage{enumitem}  % Customize \item 
+\usepackage{enumitem}  % Customize \item
 \usepackage[hidelinks]{hyperref} % hide URL
 \usepackage{fancyhdr} % header and footer customization
 \usepackage[english]{babel} % use English
@@ -54,7 +57,7 @@
 %
 \newcommand{\resumeTitle}[4]{
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-  \textbf{#1} $\vert$ \small{#2} & 
+  \textbf{#1} $\vert$ \small{#2} &
   \ifthenelse{\equal{#3}{#4}}%
       {#3}%
       {#3 --- #4}%
@@ -101,28 +104,5 @@
   \href{https://papop.dev}{https://papop.dev} & Mobile : \href{tel:+491627400833}{(+49)162-740-0833} \\
 \end{tabular*}
 
-%---------EXPERIENCE--------------
-\block{
-  \input{cv/experience/en.tex}
-}
-%---------EDUCATION---------------
-\block{
-  \input{cv/education/en.tex}
-}
-%---------PROJECT-----------------
-\block{
-  \input{cv/project/en.tex}
-}
-
-\block{
-  \input{cv/activities/en.tex}
-}
-
-\block{
-  \input{cv/skill/en.tex}
-}
-
-\block{
-  \input{cv/language/en.tex}
-}
+\input{cv/\cvtype}
 \end{document}
